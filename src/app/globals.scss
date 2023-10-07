@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=optional");
+$dark-bg: #111111; // Dark background color
+$black: #000000; // Black text color
+$white: #FFFFFF; // White text color
+
+// Accent colors
+$blue: #3498DB; // Blue accent color
+$purple: #9B59B6; // Purple accent color
+$green: #2ECC71; // Green accent color
+$orange: #E67E22; // Orange accent color
+$red: #E74C3C; // Red accent color
+$yellow: #F1C40F; // Yellow accent color
+
+// Neutral colors
+$gray: #777777; // Gray text color
+$light-gray: #AAAAAA; // Light gray text color
+$dark-gray: #333333; // Dark gray text color
+:root {
+  background-color: $white;
+  color: $dark-gray;
+
+  &.dark {
+    background-color: $dark-bg;
+    color: $light-gray;
+  }
+}
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --foreground-rgb: 255, 255, 255;
+//     --background-start-rgb: 0, 0, 0;
+//     --background-end-rgb: 0, 0, 0;
+//   }
+// }
+
+// body {
+//   color: rgb(var(--foreground-rgb));
+  
+// }
