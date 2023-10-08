@@ -7,12 +7,8 @@ $black: #000000; // Black text color
 $white: #FFFFFF; // White text color
 
 // Accent colors
-$blue: #3498DB; // Blue accent color
-$purple: #9B59B6; // Purple accent color
 $green: #2ECC71; // Green accent color
 $orange: #E67E22; // Orange accent color
-$red: #E74C3C; // Red accent color
-$yellow: #F1C40F; // Yellow accent color
 
 // Neutral colors
 $gray: #777777; // Gray text color
@@ -27,8 +23,37 @@ $dark-gray: #333333; // Dark gray text color
     color: $light-gray;
   }
   ::selection{
-    background: #3cff91;
+    background: #008080;
   }
+  #cursor {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #008080;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    transition: .1s;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#cursor2 {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #008080;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    transition: .08s;
+    pointer-events: none;
+    z-index: 1;
+
+}
+
 }
 // @media (prefers-color-scheme: dark) {
 //   :root {

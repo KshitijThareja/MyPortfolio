@@ -1,25 +1,11 @@
-'use client'
+"use client";
 import React from "react";
-import "../styles.scss";
-import "../globals.scss";
+import "./styles.scss";
+import "./globals.scss";
 import { useState } from "react";
-import {useTheme} from "../../context/ThemeContext";
-const DarkMode=() => {
-  // State: Mode
-  const {isDarkmode, toggleTheme} = useTheme();
-
-
-
-  // Effect! Change background color on toggle.
-  // React.useEffect(() => {
-  //   if (mode === "dark") {
-  //     document.body.style.backgroundColor = "#111111";
-  //   } else {
-  //     document.body.style.backgroundColor = "#ffffff";
-  //   }
-  // }, [mode]);
-
-  // Render
+import { useTheme } from "../context/ThemeContext";
+const DarkMode = () => {
+  const { isDarkmode, toggleTheme } = useTheme();
   return (
     <div className="wrap">
       <input
