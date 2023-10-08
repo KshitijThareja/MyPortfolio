@@ -26,6 +26,9 @@ $dark-gray: #333333; // Dark gray text color
     background-color: $dark-bg;
     color: $light-gray;
   }
+  ::selection{
+    background: #3cff91;
+  }
 }
 // @media (prefers-color-scheme: dark) {
 //   :root {
