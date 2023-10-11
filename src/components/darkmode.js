@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import "./styles.scss";
-import "./globals.scss";
+import "../app/styles.scss";
+import "../app/globals.scss";
 import { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 const DarkMode = () => {

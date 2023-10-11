@@ -10,6 +10,7 @@ export const ThemeProvider = ({ children }) => {
   const toggleTheme = () => {
     setIsDarkmode(!isDarkmode);
     document.documentElement.classList.toggle('dark');
+    
   };
 
   return (

@@ -1,0 +1,51 @@
+.blob{
+    background-image: url(../../public/hero1.jpg); 
+    background-size: cover;
+    background-position: center;
+    z-index:0;
+    -webkit-background-position: center;
+    background-position: center center;
+    margin: 20px;
+    box-shadow: 2px 5px 5px 5px rgba(21, 227, 216, 0.155);
+    animation: animate 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+  }
+  @keyframes animate {
+    0%, 100%{
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50%{
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+}
+.intro{
+    position: relative;
+    z-index:0;
+}
+
+#cursor {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #008080;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    transition: .1s;
+    pointer-events: none;
+}
+
+#cursor2 {
+    position: fixed;
+    width: 7px;
+    height: 7px;
+    background-color: #008080;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    transition: .08s;
+    pointer-events: none;
+    
+}

@@ -13,11 +13,13 @@ module.exports = {
       'md': '960px',
       // => @media (min-width: 960px) { ... }
 
-      'lg': '1440px',
+      'lg': '1240px',
       // => @media (min-width: 1440px) { ... }
       'hide1': {'max': '960px'},
+      'hide2':{'max': '576px'},
     },
     colors:{
+      transparent: 'transparent',
       'gray-nav':'#1c1c1c',
       'white-nav':'#ebf0ec',
       'dark-bg': '#111111', // Dark background color

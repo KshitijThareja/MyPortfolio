@@ -9,7 +9,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useTheme } from "../context/ThemeContext";
-import "./globals.scss";
+import "../app/globals.scss";
+import "./navbar.css"
 // import "../components/cursor.css";
 library.add(faBarsStaggered, faClose);
 const saira = Saira_Stencil_One({
@@ -22,7 +23,7 @@ const amatic = Amatic_SC({
 });
 const navlinks = [
   { title: "Home", href: "/" },
-  { title: "About", href: "/" },
+  { title: "About", href: "/about" },
   { title: "Skills", href: "/" },
   { title: "Projects", href: "/" },
   { title: "Contact", href: "/" },
@@ -30,7 +31,6 @@ const navlinks = [
 
 function Navbar() {
   const { isDarkmode, toggleTheme } = useTheme();
-  console.log(isDarkmode, toggleTheme);
   const [open, setOpen] = useState(false);
   const [mopen, setMopen] = useState(false);
   const toggleMenu = () => {
@@ -72,59 +72,58 @@ function Navbar() {
     }
   }
   return (
-    <>
-      <div className="w-full h-20 lg:h-28 text-black lg:bg-transparent">
-        <div className="max-w-screen-2xl h-full mx-auto px-17 flex items-center justify-between">
-          <main style={saira.style}>
-            <h1 className={isDarkmode? "text-4xl text-white uppercase ml-8" : "text-4xl text-black uppercase ml-8"}>
+    <div className="navbar">
+      <div className={isDarkmode?"w-full h-20 lg:h-28 text-black bg-gray-nav md:bg-transparent":"w-full h-20 lg:h-28 text-black bg-white md:bg-transparent"}>
+        
+        <div className="max-w-screen-2xl h-full mx-auto flex items-center justify-between">
+          <div>
+          <main style={saira.style} className="ml-6 md:ml-10">
+            <h1 className={isDarkmode? "text-4xl text-white uppercase sm:ml-4 md:ml-8 z-0" : "text-4xl text-black uppercase sm:ml-4 md:ml-8"}>
               KSHITIJ<span className=" text-green"> .</span>
             </h1>
-          </main>
-
+          </main></div>
+          <div>
           <nav
-            className={`w-full lg:flex md:items-center md:px-3 md:w-[34rem] ml-7 hide1:hidden `}
+            className={`w-full lg:flex md:items-center md:px-3 md:w-[34rem] hide1:hidden `}
           >
             <ul
               id="links"
               className="text-base text-gray-400 md:flex md:justify-between list-none"
             >
-              <li className="lg:px-6 py-2 block hover:text-white text-lg ml-9 font-semibold hover:scale-110 ease-in duration-300">
-                <Link id="Link" className={isDarkmode?"":"text-black hover:text-black"} href="/">
+              <li className="lg:px-6 py-2 block hover:text-white text-lg font-semibold hover:scale-110 ease-in duration-300">
+                <Link className={isDarkmode?"":"text-black hover:text-black"} href="/">
                   Home
                 </Link>
               </li>
               <li className="lg:px-6 py-2 block hover:text-white text-lg font-semibold hover:scale-110 ease-in duration-300">
-              <Link id="Link" className={isDarkmode?"":"text-black hover:text-black"} href="/">
+              <Link className={isDarkmode?"":"text-black hover:text-black"} href="/about">
                   About
                 </Link>
               </li>
               <li className="lg:px-6 py-2 block hover:text-white text-lg font-semibold hover:scale-110 ease-in duration-300">
-              <Link id="Link" className={isDarkmode?"":"text-black hover:text-black"} href="/">
+              <Link className={isDarkmode?"":"text-black hover:text-black"} href="/">
                   Skills
                 </Link>
               </li>
               <li className="lg:px-6 py-2 block hover:text-white text-lg font-semibold hover:scale-110 ease-in duration-300">
-              <Link id="Link" className={isDarkmode?"":"text-black hover:text-black"} href="/">
+              <Link className={isDarkmode?"":"text-black hover:text-black"} href="/">
                   Projects
                 </Link>
               </li>
               <li className="lg:px-6 py-2 block hover:text-white text-lg font-semibold hover:scale-110 ease-in duration-300">
-              <Link id="Link" className={isDarkmode?"":"text-black hover:text-black"} href="/">
+              <Link className={isDarkmode?"":"text-black hover:text-black"} href="/">
                   Contact
                 </Link>
               </li>
               <li></li>
             </ul>
-          </nav>
-
-          <div></div>
-
-          <div className="grid grid-cols-3">
-            <div className="col-span-1">
+          </nav></div>
+          <div className="grid grid-cols-3 sm:mr-0 md:mr-10">
+            <div className="col-span-1 mt-1">
               <DarkMode />
             </div>
             <div className="col-span-1 "></div>
-            <div className="col-span-1 mt-1" onClick={toggleMenu}>
+            <div className="col-span-1 mt-2 mr-4" onClick={toggleMenu}>
               <FontAwesomeIcon
                 className="fa-xl"
                 color={isDarkmode ? "white" :"#333333"}
@@ -137,7 +136,7 @@ function Navbar() {
       <AnimatePresence>
     
         {mopen && (
-          
+         
           <motion.div
             variants={menuVars}
             initial="initial"
@@ -177,17 +176,17 @@ function Navbar() {
               <div className="flex flex-col mb-10 h-full justify-center items-center hide1:hidden">
               <main style={amatic.style}>
               <p
-            className={`font-montserrat md:text-[3rem] lg:text-[4rem] text-center `}
+            className={`md:text-[3rem] lg:text-[4rem] text-center `}
           >
               Hello there 👋
             </p>
             <p
-            className={`font-montserrat md:text-[3rem] lg:text-[4rem] text-center hide1:hidden`}
+            className={`md:text-[3rem] lg:text-[4rem] text-center hide1:hidden`}
           >
               I see that you are here, but I'd have to ask you to go back and explore my portfolio further.
             </p>
             <p
-            className={`font-montserrat md:text-[3rem] lg:text-[4rem] text-center hide1:hidden`}
+            className={` md:text-[3rem] lg:text-[4rem] text-center hide1:hidden`}
           >
           Now head back! 😎  
           </p>
@@ -195,9 +194,10 @@ function Navbar() {
               </div>
             </div>
           </motion.div>
+          
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 }
 const mobileLinkVars = {
