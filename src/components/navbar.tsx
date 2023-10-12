@@ -11,7 +11,6 @@ import Link from "next/link";
 import { useTheme } from "../context/ThemeContext";
 import "../app/globals.scss";
 import "./navbar.css"
-// import "../components/cursor.css";
 library.add(faBarsStaggered, faClose);
 const saira = Saira_Stencil_One({
   subsets: ["latin"],
@@ -24,7 +23,6 @@ const amatic = Amatic_SC({
 const navlinks = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
-  { title: "Skills", href: "/" },
   { title: "Projects", href: "/" },
   { title: "Contact", href: "/" },
 ];
@@ -100,11 +98,7 @@ function Navbar() {
                   About
                 </Link>
               </li>
-              <li className="lg:px-6 py-2 block hover:text-white text-lg font-semibold hover:scale-110 ease-in duration-300">
-              <Link className={isDarkmode?"":"text-black hover:text-black"} href="/">
-                  Skills
-                </Link>
-              </li>
+             
               <li className="lg:px-6 py-2 block hover:text-white text-lg font-semibold hover:scale-110 ease-in duration-300">
               <Link className={isDarkmode?"":"text-black hover:text-black"} href="/">
                   Projects
@@ -142,7 +136,7 @@ function Navbar() {
             initial="initial"
             animate="animate"
             exit="exit"
-            className={isDarkmode?"fixed left-0 top-0 w-full origin-top h-screen bg-gray-nav text-white p-10 " :"fixed left-0 top-0 w-full origin-top h-screen bg-white-nav text-black p-10 "}>
+            className={isDarkmode?"fixed left-0 top-0 w-full origin-bottom h-screen bg-gray-nav text-white p-10 " :"fixed left-0 top-0 w-full origin-bottom h-screen bg-white-nav text-black p-10 "}>
             <div className="flex h-full flex-col">
               <div className="flex justify-between lg:px-20">
               <main style={saira.style}>

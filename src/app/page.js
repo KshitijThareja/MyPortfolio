@@ -8,6 +8,7 @@ import { Teko} from "next/font/google";
 import { useTheme } from "../context/ThemeContext";
 import "./home.css"
 import TransitionEffect from "../components/TransitionEffect";
+import AnimatedText from "../components/AnimatedText";
 const teko = Teko({
   subsets: ["latin"],
   weight: ["600"],
@@ -36,14 +37,14 @@ function LandingPage() {
       <div id="cursor2"></div>
       <TransitionEffect/>
       <div className="grid lg:grid-cols-2 sm:grid-cols-1 hide1:justify-items-center md:justify-items-center lg:justify-items-start">
-      <div className="blob translate-y-1/4 lg:translate-x-1/2 hide1:w-[17rem] hide1:h-[17rem] md:w-[23rem] md:h-[23rem] lg:w-[25rem] lg:h-[25rem]">
+      <div className="blob md:translate-y-1/4 lg:translate-y-2/4 lg:translate-x-1/2 hide1:w-[17rem] hide1:h-[17rem] md:w-[23rem] md:h-[23rem] lg:w-[25rem] lg:h-[25rem]">
       </div>
   
       <div className="intro hide1:mt-10 hide1:px-5 md:translate-y-1/4 lg:translate-y-2/4 hide1:text-center md:text-center lg:text-start lg:ml-4" style={teko.style}>
-      <p className={isDarkmode?" text-white mt-9 lg:mt-0 lg:text-start hide1:text-[3.5rem] text-[4rem]":"mt-9 lg:mt-0 hide1:text-[3.5rem] lg:text-start text-[4rem]"}>
-              Welcome to my Portfolio
-            </p>
-            <p className="mt-6 mb-4 md:ml-2 md:mt-3 hide1:text-[1.5rem] text-[2rem]" style={teko2.style}>
+        <div className="flex flex-col">
+      <AnimatedText text="Welcome to my Portfolio" className={isDarkmode?" text-white mt-9 lg:mt-4 lg:text-start hide1:text-[3.5rem] text-[4rem]":"mt-9 lg:mt-0 hide1:text-[3.5rem] lg:text-start text-[4rem]"}/></div>
+              
+            <p className="mt-8 mb-4 md:ml-2 hide1:text-[1.5rem] text-[2rem]" style={teko2.style}>
               I am a passionate developer, who is also secretly a wanna-be researcher ; )
             </p>
             <div className="md:mt-2 hide1:mb-4 justify-self-center place-content-start ml-2 md:ml-0 lg:ml-2">
