@@ -17,6 +17,7 @@ module.exports = {
       // => @media (min-width: 1440px) { ... }
       'hide1': {'max': '960px'},
       'hide2':{'max': '576px'},
+      'nlg':'1400px',
     },
     colors:{
       transparent: 'transparent',
