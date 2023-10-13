@@ -12,6 +12,7 @@ import Experience from "../../components/Experience"
 import "./about.css";
 import { AiOutlineMinus } from "react-icons/ai";
 import TypewriterComponent from "typewriter-effect";
+import Edex from "../../components/Edex"
 const teko = Teko({
   subsets: ["latin"],
   weight: ["600"],
@@ -177,6 +178,57 @@ const about = () => {
             <div className="" >
               <Experience/>
             </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 hide1:grid-rows-2 md:grid-cols-6 md:mt-44">
+          <div className="grid grid-cols-1 hide1:row-span-1 md:col-span-3 hide1:order-last lg:translate-x-1/4" style={teko2.style}>
+            <Edex/>
+          </div>
+          <div className="hide1:row-span-1 md:col-span-1 md:justify-self-end hide1:px-4 hide1:py-0 hide1:order-1" style={teko2.style}>
+            <div className="md:-rotate-90 grid md:grid-cols-2  md:w-[10rem] translate-y-3/4">
+              <div className="hide1:hidden">
+                <span className="">
+                  <AiOutlineMinus
+                    size="50px"
+                    color={isDarkmode ? "gray" : "gray"}
+                  />{" "}
+                </span>
+              </div>
+              <div className="justify-self-start">
+                <p
+                  className={
+                    isDarkmode
+                      ? "text-gray  text-[1.8rem] w-[10rem]"
+                      : "w-[10rem] text-gray text-[1.8rem]"
+                  }
+                >
+                  Education & Experience
+                </p>
+              </div>
+              <div className="md:hidden hide1:justify-self-start hide1:mb-1">
+                <span className="">
+                  <AiOutlineMinus
+                    size="50px"
+                    color={isDarkmode ? "gray" : "gray"}
+                  />{" "}
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="md:col-span-2 px-6 sm:pt-16 md:pt-0 self-start hide1:order-2" style={teko2.style}>
+            <p
+              className={
+                isDarkmode
+                  ? " text-white text-[2.5rem] mr-4"
+                  : "mr-4 text-[2.5rem]"
+              } style={teko1.style}
+            >
+              {" "}
+              A student who loves to explore various fields{" "}
+            </p>
+            <p className="text-gray text-[1.5rem] ">
+            Explore my educational background and professional journey, where I've cultivated a rich blend of knowledge and hands-on experience to bring creativity and expertise to the table.
+            </p>
           </div>
         </div>
         <Footer/>

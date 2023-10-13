@@ -37,7 +37,7 @@
 }
 .skillImageContainer:hover{
   transition: 0.5s;
-  transform: scale(1.2);
+  box-shadow: 2px 2px 2px 2px rgba(21, 227, 131, 0.155);
 }
 
 .skillImageContainer img {

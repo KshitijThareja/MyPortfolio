@@ -10,7 +10,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useTheme } from "../context/ThemeContext";
 import "../app/globals.scss";
-import "./navbar.css"
 library.add(faBarsStaggered, faClose);
 const saira = Saira_Stencil_One({
   subsets: ["latin"],
