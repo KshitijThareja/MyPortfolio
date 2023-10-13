@@ -136,7 +136,7 @@ function Navbar() {
             initial="initial"
             animate="animate"
             exit="exit"
-            className={isDarkmode?"fixed left-0 top-0 z-50 w-full origin-bottom h-screen bg-gray-nav text-white p-10" :"fixed left-0 top-0 w-full origin-bottom h-screen bg-white-nav text-black p-10 "}>
+            className={isDarkmode?"fixed left-0 top-0 z-50 w-full origin-bottom h-screen bg-gray-nav text-white p-10" :"fixed left-0 top-0 w-full origin-bottom h-screen z-50 bg-white-nav text-black p-10 "}>
             <div className="flex h-full flex-col">
               <div className="flex justify-between lg:px-20">
               <main style={saira.style}>

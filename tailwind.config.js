@@ -18,6 +18,7 @@ module.exports = {
       'hide1': {'max': '960px'},
       'hide2':{'max': '576px'},
       'nlg':'1400px',
+      'nmd': '745px',
     },
     colors:{
       transparent: 'transparent',

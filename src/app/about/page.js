@@ -2,6 +2,7 @@
 import React, { Suspense, useEffect } from "react";
 import Navbar from "../../components/navbar";
 import Link from "next/link";
+import skills from "../../components/skills.json";
 import TransitionEffect from "../../components/TransitionEffect";
 import Footer from "../footer";
 import { Teko } from "next/font/google";
@@ -37,11 +38,11 @@ const about = () => {
   return (
     <>
       <div className="h-full min-h-full flex flex-col">
-        {/* <TransitionEffect /> */}
+        <TransitionEffect />
         <div id="cursor"></div>
         <div id="cursor2"></div>
         <Navbar />
-        <div className="grid grid-cols-1 hide1:grid-rows-2 md:grid-cols-5 md:translate-y-1/4 nlg:translate-y-1/4 md:mt-5 z-40">
+        <div className="grid grid-cols-1 hide1:grid-rows-2 md:grid-cols-5 md:translate-y-1/4 nlg:translate-y-1/4 md:mt-5">
           <div className="grid grid-cols-1 hide1:row-span-1 md:col-span-2" style={teko.style}>
             <div className="text-center">
               <AnimatedText
@@ -101,7 +102,7 @@ const about = () => {
               </div>
             </div>
           </div>
-          <div className="md:col-span-2 px-6 self-start z-0 h-full" style={teko2.style}>
+          <div className="md:col-span-2 px-6 self-start h-full" style={teko2.style}>
             <p
               className={
                 isDarkmode
@@ -124,8 +125,10 @@ const about = () => {
             </p>
           </div>
         </div>
-        <div className="mt-5 grid grid-cols-1 hide1:grid-rows-1" style={teko2.style}>
-          <div className="md:-rotate-90 grid md:grid-cols-2 px-4 md:w-[10rem]">
+          <div className="grid grid-cols-1 hide1:grid-rows-2 md:grid-cols-5 lg:grid-cols-6 md:translate-y-1/4 nlg:translate-y-1/4 md:mt-9">
+          
+          <div className="hide1:row-span-1 md:col-span-1 md:justify-self-end hide1:px-4 hide1:py-0" style={teko2.style}>
+            <div className="md:-rotate-90 grid md:grid-cols-2  md:w-[10rem] translate-y-3/4">
               <div className="hide1:hidden">
                 <span className="">
                   <AiOutlineMinus
@@ -154,7 +157,8 @@ const about = () => {
                 </span>
               </div>
             </div>
-            <div className="md:col-span-2 px-6 self-start z-0 h-full" style={teko2.style}>
+          </div>
+          <div className="md:col-span-2 hide1:justify-self-start pt-6 hide1:px-6 self-start h-full" style={teko2.style}>
             <p
               className={
                 isDarkmode
@@ -163,16 +167,18 @@ const about = () => {
               } style={teko1.style}
             >
               {" "}
-              What Does My Skillset Include?{" "}
+              What Does My Skillset Include?
             </p>
-            <p className="text-gray text-[1.5rem] ">
+            <p className="text-gray text-[1.5rem]">
             I've worked with a quite a few range of tools and frameworks, some of which include:
             </p>
           </div>
-          <div className="flex">
-            <Experience/>
+          <div className="hide1:row-span-1 md:col-span-3 justify-self-center flex flex-column w-[20rem] nmd:w-[38rem] md:w-[30rem] md:col-start-2 lg:col-start-4 nlg:w-[38rem]" style={teko.style}>
+            <div className="" >
+              <Experience/>
+            </div>
           </div>
-          </div>
+        </div>
         <Footer/>
       </div>
     </>

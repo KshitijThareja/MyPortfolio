@@ -1,5 +1,21 @@
 [
   {
+    "title": "Flutter",
+    "imageSrc": "./flutter.png"
+  },
+  {
+    "title": "Django",
+    "imageSrc": "./django-logo.png"
+  },
+  {
+    "title": "Python",
+    "imageSrc": "./python-logo.png"
+  },
+  {
+    "title": "C++",
+    "imageSrc": "./c-logo.png"
+  },
+  {
     "title": "HTML",
     "imageSrc": "./html.png"
   },
