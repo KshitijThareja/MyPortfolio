@@ -40,8 +40,8 @@ const about = () => {
     <>
       <div className="h-full min-h-full flex flex-col">
         <TransitionEffect />
-        <div id="cursor"></div>
-        <div id="cursor2"></div>
+        <div id="cursor" className="hide1:hidden"></div>
+        <div id="cursor2" className="hide1:hidden"></div>
         <Navbar />
         <div className="grid grid-cols-1 hide1:grid-rows-2 md:grid-cols-5 md:translate-y-1/4 nlg:translate-y-1/4 md:mt-5">
           <div className="grid grid-cols-1 hide1:row-span-1 md:col-span-2" style={teko.style}>

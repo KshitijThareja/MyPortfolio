@@ -54,8 +54,8 @@ const projects = () => {
     <>
       <div className="h-full min-h-full flex flex-col">
         <TransitionEffect />
-        <div id="cursor"></div>
-        <div id="cursor2"></div>
+        <div id="cursor" className="hide1:hidden"></div>
+        <div id="cursor2" className="hide1:hidden"></div>
         <Navbar />
         <div className="grid grid-cols-1 hide1:grid-rows-1 md:grid-cols-5 lg:grid-cols-6 md:translate-y-1/4 lg:translate-y-2/4 md:mt-14">
           <div

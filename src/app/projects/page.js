@@ -10,10 +10,6 @@ import "./projects.css";
 import { AiOutlineMinus } from "react-icons/ai";
 import Tilt from "react-parallax-tilt";
 
-const teko = Teko({
-  subsets: ["latin"],
-  weight: ["600"],
-});
 const teko1 = Teko({
   subsets: ["latin"],
   weight: ["400"],
@@ -38,8 +34,8 @@ const projects = () => {
     <>
       <div className="h-full min-h-full flex flex-col">
         <TransitionEffect />
-        <div id="cursor"></div>
-        <div id="cursor2"></div>
+        <div id="cursor" className="hide1:hidden"></div>
+        <div id="cursor2" className="hide1:hidden"></div>
         <Navbar />
           <div className="grid grid-cols-1 hide1:grid-rows-2 md:grid-cols-5 lg:grid-cols-6 md:mt-14">
           

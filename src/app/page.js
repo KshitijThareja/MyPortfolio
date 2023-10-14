@@ -31,10 +31,10 @@ function LandingPage() {
   
   return (
     <>
-    <div className="h-full">
+    <div className="h-full min-h-full flex flex-col">
     <Navbar />
-    <div id="cursor"></div>
-      <div id="cursor2"></div>
+    <div id="cursor" className="hide1:hidden"></div>
+      <div id="cursor2" className="hide1:hidden"></div>
       <TransitionEffect/>
       <div className="grid lg:grid-cols-2 sm:grid-cols-1 hide1:justify-items-center md:justify-items-center lg:justify-items-start">
       <div className="blob mt-9 md:mt-0 md:translate-y-1/4 lg:translate-y-2/4 lg:translate-x-1/2 hide1:w-[17rem] hide1:h-[17rem] md:w-[23rem] md:h-[23rem] lg:w-[25rem] lg:h-[25rem]">
@@ -57,9 +57,9 @@ function LandingPage() {
           </div>
           
       </div>
-      
+      <Footer/>
     </div>
-    <Footer/>
+    
     </>
   );
 }
