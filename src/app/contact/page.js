@@ -17,10 +17,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AiOutlineMinus } from "react-icons/ai";
 import { ImGithub, ImLinkedin, ImTwitter, ImInstagram } from "react-icons/im";
 library.add(faEnvelope, faLocationPin, faShareNodes);
-const teko = Teko({
-  subsets: ["latin"],
-  weight: ["600"],
-});
+
 const teko1 = Teko({
   subsets: ["latin"],
   weight: ["400"],
@@ -29,19 +26,6 @@ const teko2 = Teko({
   subsets: ["latin"],
   weight: ["300"],
 });
-const ButtonMailto = ({ mailto, label }) => {
-  return (
-    <Link
-      to="#"
-      onClick={(e) => {
-        window.location.href = mailto;
-        e.preventDefault();
-      }}
-    >
-      {label}
-    </Link>
-  );
-};
 const projects = () => {
   const { isDarkmode } = useTheme();
   useEffect(() => {
@@ -69,7 +53,7 @@ const projects = () => {
   return (
     <>
       <div className="h-full min-h-full flex flex-col">
-        {/* <TransitionEffect /> */}
+        <TransitionEffect />
         <div id="cursor"></div>
         <div id="cursor2"></div>
         <Navbar />
@@ -245,7 +229,7 @@ const projects = () => {
                     onMouseLeave={() => setOver3(false)}
                   >
                     <Link
-                      href="https://twitter.com/TharejaKshitij"
+                      href="https://www.instagram.com/kshitijthareja/"
                       target="_blank"
                       passHref
                     >
