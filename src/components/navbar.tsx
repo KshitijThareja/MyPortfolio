@@ -2,6 +2,7 @@
 import React from "react";
 import DarkMode from "./darkmode";
 import { useState, useEffect } from "react";
+import { Teko } from "next/font/google";
 import { Saira_Stencil_One, Amatic_SC } from "next/font/google";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faBarsStaggered, faClose } from "@fortawesome/free-solid-svg-icons";
@@ -19,11 +20,15 @@ const amatic = Amatic_SC({
   subsets: ["latin"],
   weight: ["700"],
 });
+const teko1 = Teko({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 const navlinks = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
-  { title: "Projects", href: "/" },
-  { title: "Contact", href: "/" },
+  { title: "Projects", href: "/projects" },
+  { title: "Contact", href: "/contact" },
 ];
 
 function Navbar() {
@@ -99,12 +104,12 @@ function Navbar() {
               </li>
              
               <li className="lg:px-6 py-2 block hover:text-white text-lg font-semibold hover:scale-110 ease-in duration-300">
-              <Link className={isDarkmode?"":"text-black hover:text-black"} href="/">
+              <Link className={isDarkmode?"":"text-black hover:text-black"} href="/projects">
                   Projects
                 </Link>
               </li>
               <li className="lg:px-6 py-2 block hover:text-white text-lg font-semibold hover:scale-110 ease-in duration-300">
-              <Link className={isDarkmode?"":"text-black hover:text-black"} href="/">
+              <Link className={isDarkmode?"":"text-black hover:text-black"} href="/contact">
                   Contact
                 </Link>
               </li>
@@ -132,6 +137,7 @@ function Navbar() {
          
           <motion.div
             variants={menuVars}
+            style={teko1.style}
             initial="initial"
             animate="animate"
             exit="exit"
@@ -214,7 +220,7 @@ const MobileNavLink = ({ title, href }) => {
   return (
     <motion.div
       variants={mobileLinkVars}
-      className="text-4xl uppercase py-4 z-100"
+      className="text-5xl uppercase py-4 z-100"
     >
       <Link href={href}>{title}</Link>
     </motion.div>

@@ -36,8 +36,14 @@ const Edex = () => {
         whileInView={{y:0}}
         transition={{duration:0.5,type:"spring"}}
         style={{scaleY:scrollYProgress}}
-        className={isDarkmode?"absolute left-9 top-0 w-[4px] h-full bg-white origin-top":"absolute left-9 top-0 w-[4px] h-full bg-black origin-top"}/>
-        <ul className="ml-14 w-full flex flex-col items-start justify-between">
+        className={isDarkmode?"absolute -inset-0.5 left-9 top-0 blur opacity-75 w-[4px] h-full bg-gradient origin-top":"absolute left-9 top-0 w-[2px] h-full bg-black origin-top"}/>
+        <motion.div
+        initial={{y:50}}
+        whileInView={{y:0}}
+        transition={{duration:0.5,type:"spring"}}
+        style={{scaleY:scrollYProgress}}
+        className={isDarkmode?"absolute left-9 top-0 w-[2px] h-full bg-gradient origin-top":"absolute left-9 top-0 w-[3px] h-full bg-black origin-top"}/>
+        <ul className="ml-14 hide1:ml-7 w-full flex flex-col items-start justify-between">
             <Details
             heading="Middle School" time="2020" address="Karnal, Haryana" work="I completed my middle schooling from Montfort World School with major focus on my problem solving skills in mathematics and physics."
             />
@@ -45,7 +51,7 @@ const Edex = () => {
             heading="High School" time="2022" address="Karnal, Haryana" work="I completed my high school year from Montfort World School with most of my time devoted to competitive examinations. I achieved a lot of recognition for my academic record."
             />
             <Details
-            heading="BTech in Computer Science" time="2022-Present" address="Amritapuri, Kerala" work="I am currently in my sophomore year at Amrita Vishwa Vidyapeetham, Amritapuri. I have been quite consistent in maintaing my academics and other interests like programming simultaneously"
+            heading="BTech in Computer Science" time="2022-Present" address="Amritapuri, Kerala" work="I am currently in my sophomore year at Amrita Vishwa Vidyapeetham, Amritapuri. I have been quite consistent in maintaining my academics and other interests like programming simultaneously"
             />
             <Details
             heading="Member @amFOSS" time="2023" address="Amritapuri, Kerala" work="I was selected as a member of team amFOSS, one of the best FOSS clubs from India. Here, I spend time working on various projects and honing my skills, both technical and non-technical."

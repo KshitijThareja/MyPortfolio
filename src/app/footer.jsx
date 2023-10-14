@@ -20,7 +20,7 @@ const Footer = () => {
   const [over1, setOver1] = useState(false);
   const [over2, setOver2] = useState(false);
   return (
-    <footer className={"w-full text-black text-[1.2rem] bottom-0 pt-10 z-0 mt-40"} style={teko.style}>
+    <footer className={"w-full text-black text-[1.2rem] bottom-0 pt-10 mt-auto z-0 mt-40"} style={teko.style}>
       <div
         className={
           isDarkmode

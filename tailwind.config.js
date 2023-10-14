@@ -28,11 +28,11 @@ module.exports = {
       'gray-400':'#9ca3af',
       'black': '#000000', // Black text color
       'white': '#FFFFFF', // White text color
-
+      'gradient':'#58E6D9',
       // Accent colors
       'green': "#2ECC71", // Green accent color
       'orange': '#E67E22', // Orange accent color
-
+      'neutral-900': '#171717',
       // Neutral colors
       'gray': '#777777',// Gray text color
       'light-gray': '#AAAAAA', // Light gray text color
