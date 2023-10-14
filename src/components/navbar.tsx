@@ -16,10 +16,6 @@ const saira = Saira_Stencil_One({
   subsets: ["latin"],
   weight: ["400"],
 });
-const amatic = Amatic_SC({
-  subsets: ["latin"],
-  weight: ["700"],
-});
 const teko1 = Teko({
   subsets: ["latin"],
   weight: ["400"],
@@ -173,7 +169,7 @@ function Navbar() {
                 })}
               </motion.div>
               <div className="flex flex-col mb-10 h-full justify-center items-center hide1:hidden">
-              <main style={amatic.style}>
+              <main style={teko1.style}>
               <p
             className={`md:text-[3rem] lg:text-[4rem] text-center `}
           >
