@@ -105,20 +105,18 @@ const projects = () => {
               style={teko1.style}
             >
               {" "}
-              Want to work together for a project? Need to reach out?
+              Have a project in mind? Need to reach out?
             </p>
             <p className="text-gray text-[1.5rem]">
-              Feel free to reach out and let me know if I can help. Looking to
-              hire me for a project? You can download my CV from the button
-              below.
+              Feel free to contact me on my mail. If you are a recruiter, click on the button below to download my CV : )
             </p>
-            <div className="mt-4 hide1:mb-4 justify-self-center place-content-start">
+            <div className="mt-4 hide1:mb-4 place-content-start">
               <button
                 onClick={onButtonClick}
                 className={
                   isDarkmode
-                    ? "px-4 py-2 lg:px-7 lg:py-2 text-white text-[1.5rem] font-semibold border border-white rounded cursor-pointer hover:bg-white hover:text-black"
-                    : "lg:px-7 lg:py-2 px-4 py-2 text-black text-[1.5rem] font-semibold border border-dark-bg rounded cursor-pointer hover:bg-dark-bg hover:text-white"
+                    ? "px-4 py-2 lg:px-7 lg:py-2 text-white text-[1.5rem] font-semibold border border-white rounded cursor-pointer hover:bg-white hover:text-black transition-all duration-500"
+                    : "lg:px-7 lg:py-2 px-4 py-2 text-black text-[1.5rem] font-semibold border border-dark-bg rounded cursor-pointer hover:bg-dark-bg hover:text-white transition-all duration-500"
                 }
               >
                 Download CV
@@ -130,7 +128,7 @@ const projects = () => {
             style={teko2.style}
           >
             <div className="justify-center gap-x-5">
-              <div className="justify-self-end text-[1.1rem]">
+              <div className="justify-self-start text-[1.1rem]">
                 <FontAwesomeIcon
                   className="fa-xl"
                   color={isDarkmode ? "#2ECC71" : "#333333"}
@@ -143,7 +141,7 @@ const projects = () => {
               </div>
             </div>
             <div className="justify-center hide1:mt-3 gap-x-5">
-              <div className="justify-self-end text-[1.1rem]">
+              <div className="justify-self-start text-[1.1rem]">
                 <FontAwesomeIcon
                   className="fa-xl"
                   color={isDarkmode ? "#2ECC71" : "#333333"}
@@ -158,8 +156,8 @@ const projects = () => {
               </div>
             </div>
             <div>
-              <div className="justify-self-start hide1:mt-3 grid grid-cols-2">
-                <div className="justify-self-start text-[1.1rem]">
+              <div className="justify-self-start hide1:mt-3 flex">
+                <div className="justify-self-start text-[1.1rem] mr-3">
                   <FontAwesomeIcon
                     className="fa-xl"
                     color={isDarkmode ? "#2ECC71" : "#333333"}
@@ -187,7 +185,7 @@ const projects = () => {
                     </Link>
                   </div>
                   <div
-                    className="ml-3"
+                    className="ml-5"
                     onMouseOver={() => setOver1(true)}
                     onMouseLeave={() => setOver1(false)}
                   >
@@ -205,7 +203,7 @@ const projects = () => {
                     </Link>
                   </div>
                   <div
-                    className="ml-3"
+                    className="ml-5"
                     onMouseOver={() => setOver2(true)}
                     onMouseLeave={() => setOver2(false)}
                   >
@@ -224,7 +222,7 @@ const projects = () => {
                     </Link>
                   </div>
                   <div
-                    className="ml-3"
+                    className="ml-5"
                     onMouseOver={() => setOver3(true)}
                     onMouseLeave={() => setOver3(false)}
                   >

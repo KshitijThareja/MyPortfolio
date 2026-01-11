@@ -59,12 +59,12 @@ const about = () => {
               className={
                 isDarkmode
                   ? " text-green hide1:mt-5 md:mb-5 text-center hide1:text-[3.5rem] nlg:mt-5 text-[4rem]"
-                  : " text-green hide1:text-[3.5rem] md:mb-5 hide1:mt-5 text-center nlg:mt-5 justify-items-start text-[4rem]"
+                  : " text-green hide1:text-[3.5rem] md:mb-5 hide1:mt-5 text-center nlg:mt-5 text-[4rem]"
               }
             >
               <TypewriterComponent
                 options={{
-                  strings: ["A Designer", "A Developer", "An ML Enthusiast"],
+                  strings: ["A Developer", "A Designer", "An Engineer"],
                   autoStart: true,
                   loop: true,
                   delay: 90,
@@ -118,10 +118,10 @@ const about = () => {
               Hello, I'm Kshitij Thareja, a developer and a student. My journey
               began with a relentless curiosity to unravel the mysteries of
               code. Over the years, I've honed my skills in software development
-              and also dived into machine learning. My passion lies in creating
-              intelligent systems that can adapt and solve real-world
+              and also dived into various other domains. My passion lies in creating
+              meaningful solutions that can adapt and solve real-world
               challenges. Along with working solo on various projects, I've had
-              the privilege of collaborating within diverse teams, harnessing
+              the privilege of collaborating with diverse teams, harnessing
               collective creativity to deliver innovative solutions.
             </p>
           </div>

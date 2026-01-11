@@ -44,12 +44,12 @@ function LandingPage() {
         <div className="flex flex-col">
       <AnimatedText text="Welcome to my Portfolio" className={isDarkmode?" text-white md:mt-9 lg:mt-4 lg:text-start hide1:text-[3.5rem] text-[4rem]":"md:mt-9 lg:mt-4 hide1:text-[3.5rem] lg:text-start text-[4rem]"}/></div>
               
-            <p className="mt-8 mb-4 md:ml-2 hide1:text-[1.5rem] text-[2rem]" style={teko2.style}>
-              I am a passionate developer, who is also secretly a wanna-be researcher ; )
+            <p className="mt-10 mb-4 md:ml-2 hide1:text-[1.5rem] text-[2rem]" style={teko2.style}>
+              I love building solutions that deliver real impact ; )
             </p>
-            <div className="md:mt-2 hide1:mb-4 md:mb-24 justify-self-center place-content-start ml-2 md:ml-0 lg:ml-2">
+            <div className="md:mt-2 hide1:mb-4 md:mb-24 place-content-start ml-2 md:ml-0 lg:ml-2">
             <Link href="/about" passHref>
-              <button className={isDarkmode?"px-4 py-2 lg:px-7 lg:py-2 text-white text-[1.5rem] font-semibold border border-white rounded cursor-pointer hover:bg-white hover:text-black":"lg:px-7 lg:py-2 px-4 py-2 text-black text-[1.5rem] font-semibold border border-dark-bg rounded cursor-pointer hover:bg-dark-bg hover:text-white"}>
+              <button className={isDarkmode?"px-4 py-2 lg:px-7 lg:py-2 text-white text-[1.5rem] font-semibold border border-white rounded cursor-pointer hover:bg-white hover:text-black transition-all duration-500":"px-4 py-2 lg:px-7 lg:py-2 text-black text-[1.5rem] font-semibold border border-dark-bg rounded cursor-pointer hover:bg-dark-bg hover:text-white transition-all duration-500"}>
                 About me
               </button>
             </Link>
