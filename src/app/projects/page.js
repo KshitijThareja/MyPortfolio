@@ -21,21 +21,11 @@ const teko2 = Teko({
 
 const projects = () => {
   const { isDarkmode } = useTheme();
-  useEffect(() => {
-    var cursor = document.querySelector("#cursor");
-    var cursor2 = document.querySelector("#cursor2");
-
-    document.addEventListener("mousemove", function (e) {
-      cursor.style.cssText = cursor2.style.cssText =
-        "left:" + e.clientX + "px;" + "top:" + e.clientY + "px;";
-    });
-  }, []);
   return (
     <>
       <div className="h-full min-h-full flex flex-col">
         <TransitionEffect />
-        <div id="cursor" className="hide1:hidden"></div>
-        <div id="cursor2" className="hide1:hidden"></div>
+
         <Navbar />
         <div className="grid grid-cols-1 hide1:grid-rows-2 md:grid-cols-5 lg:grid-cols-6 md:mt-14">
 

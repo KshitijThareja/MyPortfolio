@@ -27,21 +27,11 @@ const teko2 = Teko({
 });
 const about = () => {
   const { isDarkmode } = useTheme();
-  useEffect(() => {
-    var cursor = document.querySelector("#cursor");
-    var cursor2 = document.querySelector("#cursor2");
-
-    document.addEventListener("mousemove", function (e) {
-      cursor.style.cssText = cursor2.style.cssText =
-        "left:" + e.clientX + "px;" + "top:" + e.clientY + "px;";
-    });
-  }, []);
   return (
     <>
       <div className="h-full min-h-full flex flex-col">
         <TransitionEffect />
-        <div id="cursor" className="hide1:hidden"></div>
-        <div id="cursor2" className="hide1:hidden"></div>
+
         <Navbar />
         <div className="grid grid-cols-1 hide1:grid-rows-2 md:grid-cols-5 md:translate-y-1/4 nlg:translate-y-1/4 md:mt-5">
           <div className="grid grid-cols-1 hide1:row-span-1 md:col-span-2" style={teko.style}>
@@ -126,8 +116,8 @@ const about = () => {
             </p>
           </div>
         </div>
-          <div className="grid grid-cols-1 hide1:grid-rows-2 md:grid-cols-5 lg:grid-cols-6 md:translate-y-1/4 nlg:translate-y-1/4 md:mt-9">
-          
+        <div className="grid grid-cols-1 hide1:grid-rows-2 md:grid-cols-5 lg:grid-cols-6 md:translate-y-1/4 nlg:translate-y-1/4 md:mt-9">
+
           <div className="hide1:row-span-1 md:col-span-1 md:justify-self-end hide1:px-4 hide1:py-0" style={teko2.style}>
             <div className="md:-rotate-90 grid md:grid-cols-2  md:w-[10rem] translate-y-3/4">
               <div className="hide1:hidden">
@@ -171,18 +161,18 @@ const about = () => {
               What Does My Skillset Include?
             </p>
             <p className="text-gray text-[1.5rem]">
-            I've worked with a quite a few range of tools and frameworks, some of which include:
+              I've worked with a quite a few range of tools and frameworks, some of which include:
             </p>
           </div>
           <div className="hide1:row-span-1 md:col-span-3 justify-self-center flex flex-column w-[20rem] nmd:w-[38rem] md:w-[30rem] md:col-start-2 lg:col-start-4 nlg:w-[38rem]" style={teko.style}>
             <div className="" >
-              <Experience/>
+              <Experience />
             </div>
           </div>
         </div>
         <div className="grid grid-cols-1 hide1:grid-rows-2 md:grid-cols-6 md:mt-44">
           <div className="grid grid-cols-1 hide1:row-span-1 md:col-span-3 hide1:order-last lg:translate-x-1/4" style={teko2.style}>
-            <Edex/>
+            <Edex />
           </div>
           <div className="hide1:row-span-1 md:col-span-1 md:justify-self-end hide1:px-4 hide1:py-0 hide1:order-1" style={teko2.style}>
             <div className="md:-rotate-90 grid md:grid-cols-2  md:w-[10rem] translate-y-3/4">
@@ -227,11 +217,11 @@ const about = () => {
               A student who loves to explore various fields{" "}
             </p>
             <p className="text-gray text-[1.5rem] ">
-            Explore my educational background and professional journey, where I've cultivated a rich blend of knowledge and hands-on experience to bring creativity and expertise to the table.
+              Explore my educational background and professional journey, where I've cultivated a rich blend of knowledge and hands-on experience to bring creativity and expertise to the table.
             </p>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );
