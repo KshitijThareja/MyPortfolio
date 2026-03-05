@@ -1,0 +1,192 @@
+/* ── animated focus underline ── */
+.cf-wrap {
+    position: relative;
+}
+
+.cf-wrap input,
+.cf-wrap textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-clr, rgba(255, 255, 255, 0.1));
+    padding: 10px 0 9px;
+    font-size: 1.22rem;
+    color: var(--text-clr, #ffffff);
+    outline: none;
+    resize: none;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.cf-wrap input::placeholder,
+.cf-wrap textarea::placeholder {
+    color: var(--muted-clr, #666666);
+    opacity: 1;
+}
+
+.cf-wrap input:focus,
+.cf-wrap textarea:focus {
+    border-bottom-color: transparent;
+}
+
+.cf-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: var(--accent-clr, #2ECC71);
+    transition: width 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.cf-wrap input:focus~.cf-line,
+.cf-wrap textarea:focus~.cf-line {
+    width: 100%;
+}
+
+/* ── label ── */
+.cf-label {
+    display: block;
+    font-size: 0.78rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--muted-clr, #666666);
+    margin-bottom: 1px;
+    font-family: inherit;
+}
+
+/* ── card ── */
+.cf-card {
+    background: var(--card-bg, rgba(255, 255, 255, 0.03));
+    border: 1px solid var(--border-clr, rgba(255, 255, 255, 0.1));
+    padding: clamp(1.5rem, 3vw, 2.2rem) clamp(1.2rem, 2.5vw, 2rem);
+}
+
+/* ── section eyebrow ── */
+.cf-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.88rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--muted-clr, #666666);
+    margin-bottom: 1.8rem;
+    font-family: inherit;
+}
+
+.cf-eyebrow-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent-clr, #2ECC71);
+    flex-shrink: 0;
+}
+
+/* ── char count ── */
+.cf-count {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-align: right;
+    margin-top: 5px;
+    color: var(--muted-clr, #666666);
+    opacity: 0.65;
+    font-family: inherit;
+}
+
+/* ── two-col field row ── */
+.cf-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.4rem;
+}
+
+@media (max-width: 480px) {
+    .cf-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── send button ── */
+.cf-send {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    padding: 11px 32px;
+    border: 1px solid var(--text-clr, #ffffff);
+    background: transparent;
+    color: var(--text-clr, #ffffff);
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-family: inherit;
+    cursor: pointer;
+    transition: color 0.42s, border-color 0.42s;
+}
+
+.cf-send::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--accent-clr, #2ECC71);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.44s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+}
+
+.cf-send:hover::after {
+    transform: scaleX(1);
+}
+
+.cf-send:hover {
+    color: #000;
+    border-color: var(--accent-clr, #2ECC71);
+}
+
+.cf-send>* {
+    position: relative;
+    z-index: 1;
+}
+
+.cf-send:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.cf-send:disabled::after {
+    display: none;
+}
+
+.cf-arrow {
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+.cf-send:hover .cf-arrow {
+    transform: translateX(4px);
+}
+
+/* ── status messages ── */
+@keyframes cfFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cf-status {
+    animation: cfFadeUp 0.3s ease;
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-family: inherit;
+}

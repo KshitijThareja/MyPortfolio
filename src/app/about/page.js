@@ -9,7 +9,6 @@ import { Teko } from "next/font/google";
 import AnimatedText from "../../components/AnimatedText";
 import { useTheme } from "../../context/ThemeContext";
 import Experience from "../../components/Experience"
-import "./about.css";
 import { AiOutlineMinus } from "react-icons/ai";
 import TypewriterComponent from "typewriter-effect";
 import Edex from "../../components/Edex"

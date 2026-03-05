@@ -49,18 +49,18 @@ const Footer = () => {
           </p>
         </div>
         <div className="z-0 flex flex-row space-x-7 hide1:mt-2 justify-self-center">
-         <div className="" onMouseOver={() => setOver(true)}
-        onMouseLeave={() => setOver(false)}>
-          <Link href="https://github.com/KshitijThareja" target="_blank" passHref><ImGithub size="30px" color={over?"#2ECC71":(isDarkmode?"white":"black")}/></Link>
-         </div>
-         <div onMouseOver={() => setOver1(true)}
-        onMouseLeave={() => setOver1(false)}>
-          <Link href="https://www.linkedin.com/in/kshitijthareja/" target="_blank" passHref><ImLinkedin size="30px" color={over1?"#2ECC71":(isDarkmode?"white":"black")}/></Link>
-         </div>
-         <div className="" onMouseOver={() => setOver2(true)}
-        onMouseLeave={() => setOver2(false)}>
-         <Link href="https://twitter.com/TharejaKshitij" target="_blank" passHref> <ImTwitter size="30px" color={over2?"#2ECC71":(isDarkmode?"white":"black")}/></Link>
-         </div>
+          <div className="" onMouseOver={() => setOver(true)}
+            onMouseLeave={() => setOver(false)}>
+            <Link href="https://github.com/KshitijThareja" target="_blank" passHref><ImGithub size="30px" color={over ? "#2ECC71" : (isDarkmode ? "white" : "black")} /></Link>
+          </div>
+          <div onMouseOver={() => setOver1(true)}
+            onMouseLeave={() => setOver1(false)}>
+            <Link href="https://www.linkedin.com/in/kshitijthareja/" target="_blank" passHref><ImLinkedin size="30px" color={over1 ? "#2ECC71" : (isDarkmode ? "white" : "black")} /></Link>
+          </div>
+          <div className="" onMouseOver={() => setOver2(true)}
+            onMouseLeave={() => setOver2(false)}>
+            <Link href="https://twitter.com/TharejaKshitij" target="_blank" passHref> <ImTwitter size="30px" color={over2 ? "#2ECC71" : (isDarkmode ? "white" : "black")} /></Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -6,7 +6,6 @@ import TransitionEffect from "../../components/TransitionEffect";
 import Footer from "../footer";
 import { Teko } from "next/font/google";
 import { useTheme } from "../../context/ThemeContext";
-import "./projects.css";
 import { AiOutlineMinus } from "react-icons/ai";
 import Tilt from "react-parallax-tilt";
 
