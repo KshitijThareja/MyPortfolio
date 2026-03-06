@@ -6,8 +6,14 @@ const CustomCursor = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isVisible, setIsVisible] = useState(false);
     const [hoverState, setHoverState] = useState("default");
+    const [isTouchDevice, setIsTouchDevice] = useState(false);
 
     useEffect(() => {
+        // Check if device supports touch
+        if (typeof window !== "undefined") {
+            const hasTouch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+            setIsTouchDevice(hasTouch);
+        }
         const updateMousePosition = (e) => {
             if (!isVisible) setIsVisible(true);
             setMousePosition({ x: e.clientX, y: e.clientY });
@@ -50,7 +56,8 @@ const CustomCursor = () => {
         };
     }, [isVisible]);
 
-    if (!isVisible) return null;
+    // Don't render on touch devices
+    if (isTouchDevice || !isVisible) return null;
 
     const variantsRing = {
         default: {
